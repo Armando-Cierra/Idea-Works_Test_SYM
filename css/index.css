@@ -467,7 +467,6 @@ header .gradient .purple div a:hover {
 
 @media screen and (min-width: 1370px) {
   header {
-    height: 90vh;
     background-attachment: fixed !important;
   }
   header .gradient .purple {
