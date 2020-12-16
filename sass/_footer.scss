@@ -13,6 +13,12 @@ footer{
             margin-bottom: 1rem;
             a{
                 padding: .5rem;
+                &:hover{
+                    i{
+                        transition: ease-in-out .25s;
+                        transform: scale(1.1);
+                    }
+                }
             }
         }
     }

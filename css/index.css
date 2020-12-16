@@ -285,7 +285,7 @@ p {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: rgba(137, 45, 238, 0.7);
+  background: rgba(39, 13, 66, 0.7);
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   z-index: 800;
@@ -312,8 +312,8 @@ header .gradient {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(137, 45, 238, 0.4)), color-stop(30%, rgba(137, 45, 238, 0)));
-  background: linear-gradient(to top, rgba(137, 45, 238, 0.4), rgba(137, 45, 238, 0) 30%);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(137, 45, 238, 0.2)), color-stop(30%, rgba(137, 45, 238, 0)));
+  background: linear-gradient(to top, rgba(137, 45, 238, 0.2), rgba(137, 45, 238, 0) 30%);
 }
 
 header .gradient .purple {
@@ -864,6 +864,13 @@ footer .networks .icons {
 
 footer .networks .icons a {
   padding: .5rem;
+}
+
+footer .networks .icons a:hover i {
+  -webkit-transition: ease-in-out .25s;
+  transition: ease-in-out .25s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 @media screen and (min-width: 1000px) {
