@@ -1,0 +1,116 @@
+@import 'variables';
+
+.process{
+    padding: 6rem 4rem;
+    padding-top: 0;
+    .container{
+        .title{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 3rem;
+            h2{
+                margin-bottom: 2rem;
+            }
+        }
+        .steps{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 2.5rem;
+            .step{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                img{
+                    width: 40px;
+                    margin-bottom: 1rem;
+                }
+                h3{
+                    margin-bottom: 1rem;
+                    text-transform: uppercase;
+                    font-size: 1rem;
+                }
+                .position{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 1rem;
+                    position: relative;
+                    &::after{
+                        position: absolute;
+                        content: '';
+                        width: 50%;
+                        height: 2px;
+                        background: lightgrey;
+                        z-index: -1;
+                    }
+                    .number{
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 50%;
+                        background: $dark-yellow;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-weight: $bold;
+                    }
+                }
+                p{
+                    text-align: center;
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 700px){
+    .process{
+        .container{
+            .steps{
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 0;
+                .step{
+                    p{
+                        text-align: justify;
+                        padding: 1rem;
+                    }
+                    .position{
+                        &::after{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1000px){
+    .process{
+        .container{
+            .steps{
+                grid-template-columns: repeat(4, 1fr);
+                .step{
+                    &:first-child{
+                        .position{
+                            &::after{
+                                width: 50%;
+                                right: 0;
+                            }
+                        }
+                    }
+                    &:last-child{
+                        .position{
+                            &::after{
+                                width: 50%;
+                                left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

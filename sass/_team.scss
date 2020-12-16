@@ -1,0 +1,82 @@
+@import 'variables';
+
+.team{
+    padding: 6rem 4rem;
+    padding-top: 0;
+    .container{
+        width: 100%;
+        max-width: 1400px;
+        margin: auto;
+        .text{
+            display: flex;
+            flex-direction: column;
+            .title{
+                h2{
+                    text-transform: uppercase;
+                    font-size: 1.2rem;
+                    margin-bottom: .5rem;
+                }
+                .decoration{
+                    margin-bottom: 1rem;
+                }
+            }
+            p{
+                margin-bottom: 2rem;
+            }
+        }
+        .teamGalery{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 1rem;
+            .member{
+                cursor: pointer;
+                img{
+                    width: 100%;
+                    margin-bottom: 1.5rem;
+                    transition: ease-in-out .25s;
+                }
+                h3{
+                    font-size: 1rem;
+                    text-align: center;
+                    transition: ease-in-out .15s;
+                }
+                p{
+                    font-size: .8rem;
+                    text-align: center;
+                    transition: ease-in-out .15s;
+                }
+                &:hover{
+                    img{
+                        transform: scale(1.025);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and(min-width: 500px){
+    .team{
+        .container{
+            .teamGalery{
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 2.5rem;
+            }
+        }
+    }
+}
+
+@media screen and(min-width: 1000px){
+    .team{
+        .container{
+            .text{
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .teamGalery{
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 2.5rem;
+            }
+        }
+    }
+}

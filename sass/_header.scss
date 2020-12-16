@@ -1,0 +1,120 @@
+@import 'variables';
+
+header{
+    width: 100%;
+    height: 100vh;
+    background-size: cover !important;
+    background-position: center !important;
+    position: relative;
+    .gradient{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, rgba(137, 45, 238, .4), rgba(137, 45, 238, 0) 30%);
+        .purple{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 80%;
+            background: rgba(137, 45, 238, .8);
+            backdrop-filter: blur(4px);
+            clip-path: polygon(100% 0, 100% 100%, 50% 95%, 0 100%, 0 0);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            padding-top: 80px;
+            h1{
+                color: $white;
+                font-weight: $bold;
+                font-size: 2.8rem;
+                text-align: center;
+                margin-bottom: 1rem;
+                span{
+                    animation-name: difference;
+                    animation-duration: 6s;
+                    animation-timing-function: ease-in-out;
+                    animation-iteration-count: infinite;
+                }
+            }
+            div{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                p{
+                    font-size: 1.2rem;
+                    color: $white;
+                    text-align: center;
+                    margin-bottom: 2rem;
+                }
+                a{
+                    color: $white;
+                    transition: ease-in-out .15s;
+                    &:hover{
+                        color: $dark-yellow;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+@keyframes difference{
+    0% {background: rgba(0, 0, 0, 0); color: $white;}
+    30% {background: rgba(0, 0, 0, 0); color: $white;}
+    33% {background: rgba(0, 0, 0, 0); color: $dark-yellow;}
+    63% {background: rgba(0, 0, 0, 0); color: $dark-yellow;}
+    66% {background: $dark-yellow; color: $black;}
+    97% {background: $dark-yellow; color: $black;}
+
+}
+
+@media screen and (min-width: 700px){
+    header{
+        .gradient{
+            .purple{
+                clip-path: polygon(100% 0, 100% 100%, 50% 90%, 0 100%, 0 0);
+                h1{
+                    font-size: 4.5rem;
+                    margin-bottom: 2rem;
+                }
+                div{
+                    p{
+                        font-size: 1.5rem;
+                        line-height: 2.2rem;
+                    }
+                    a{
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1370px){
+    header{
+        height: 90vh;
+        background-attachment: fixed !important;
+        .gradient{
+            .purple{
+                height: 100%;
+                clip-path: polygon(0 0, 45% 0%, 75% 100%, 0% 100%);
+                align-items: flex-start;
+                padding-left: 4rem;
+                h1{
+                    font-size: 5.5rem;
+                }
+                div{
+                    align-items: flex-start;
+                    p{
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}
